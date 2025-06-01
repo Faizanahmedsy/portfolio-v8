@@ -95,9 +95,15 @@ const TECH_STACK: TechItem[] = [
     category: "framework",
     color: "#61DAFB",
   },
+  // {
+  //   name: "Ionic",
+  //   icon: "logos:ionic-icon",
+  //   category: "framework",
+  //   color: "#3880FF",
+  // },
   {
-    name: "Ionic",
-    icon: "logos:ionic-icon",
+    name: "Payload CMS",
+    icon: "simple-icons:payloadcms",
     category: "framework",
     color: "#3880FF",
   },
@@ -246,7 +252,7 @@ const TechStack: React.FC = () => {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="h-full grid xl:grid-cols-3 lg:grid-cols-2 gap-6 mt-14 md:px-32 px-4">
+      <div className="h-full grid xl:grid-cols-2 lg:grid-cols-2 gap-6 mt-14 md:px-32 px-4">
         <TechCategory
           title="Languages"
           titleColor="text-rose-400"
@@ -261,13 +267,13 @@ const TechStack: React.FC = () => {
           category="framework"
           isVisible={isInView}
         />
-        <TechCategory
+        {/* <TechCategory
           title="Libraries"
           titleColor="text-sky-400"
           items={TECH_STACK}
           category="library"
           isVisible={isInView}
-        />
+        /> */}
       </div>
     </div>
   );
