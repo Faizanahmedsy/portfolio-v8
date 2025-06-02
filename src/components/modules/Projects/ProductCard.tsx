@@ -1,3 +1,5 @@
+"use client";
+import SpotlightCard from "@/Components/SpotlightCard/SpotlightCard";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
 import { ArrowBigUp, Link2 } from "lucide-react";
@@ -5,7 +7,9 @@ import Link from "next/link";
 
 export const ProductCard = ({ product }: { product: Project }) => {
   return (
-    <div className="border p-5 rounded-md bg-slate-800 ">
+    <SpotlightCard
+      className={cn("border p-5 rounded-md bg-slate-800", product.customClass)}
+    >
       <div className="flex justify-between">
         <h2 className="font-bold ">{product?.title}</h2>
         <div className="flex gap-2">
@@ -36,6 +40,6 @@ export const ProductCard = ({ product }: { product: Project }) => {
           </div>
         ))}
       </div>
-    </div>
+    </SpotlightCard>
   );
 };

@@ -27,7 +27,7 @@ export default function RootLayout({
         )}
       >
         <NavigationBar />
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         {children}
         <Footer />
       </body>

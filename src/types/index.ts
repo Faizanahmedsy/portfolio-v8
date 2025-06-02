@@ -4,4 +4,5 @@ export type Project = {
   tech: string[];
   status: "In Progress" | "Completed" | "On Hold";
   href?: string;
+  customClass?: string;
 };

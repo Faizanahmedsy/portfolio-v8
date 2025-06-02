@@ -1,4 +1,6 @@
+"use client";
 import { VariantSwitch } from "@/components";
+import SpotlightCard from "@/Components/SpotlightCard/SpotlightCard";
 import { ProjectsData } from "@/constants/data";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types";
@@ -85,7 +87,7 @@ export default function Page({}: Props) {
 
         <div className="grid md:grid-cols-2 py-4 gap-4">
           {ProjectsData.map((product, i) => (
-            <div key={i} className="border p-5 rounded-md">
+            <SpotlightCard key={i} className="border p-5 rounded-md">
               <div className="flex justify-between">
                 <h2 className="font-bold ">{product.title}</h2>
                 <p
@@ -113,7 +115,7 @@ export default function Page({}: Props) {
                   </div>
                 ))}
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
         {/*<p className="leading-7 [&:not(:first-child)]:mt-6">
